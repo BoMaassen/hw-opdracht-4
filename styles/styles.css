@@ -160,34 +160,34 @@ header img {
     padding: 2em 1em;
 }
 
-article {
+.case-studies article {
     display: flex;
     flex-direction: column-reverse;
     margin: 2em 0.5em;
 }
 
-article > span > img {
+.case-studies article > span > img {
     width: 100%;
     margin-bottom: 2em;
     box-shadow: 0 10px 15px rgb(0,0,0,0.15);
 }
 
-article h3 {
+.case-studies article h3 {
     font-size: 22px;
 }
 
-article div {
+.case-studies article div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
 }
 
-article div img {
+.case-studies article div img {
     width: 50px;
 }
 
-article div a {
+.case-studies article div a {
     text-transform: uppercase;
     font-weight: 500;
     color: var(--paars);
@@ -195,8 +195,51 @@ article div a {
 }
 
 /* --------------- 4.4 Services ------------------- */
+.services div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+}
+.services article {
+    border: 1px solid var(--paars);
+    margin: 1em 2em;
+    padding: 2em;
+    box-shadow: 0 10px 15px rgb(0,0,0,0.15);
+    flex-basis: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.services img {
+    width: 75px;
+}
+.services p {
+    font-size: 0.8em;
+    color: var(--grijs);
+}
+.services h4 {
+    font-size: 1.2em;
+}
+
 /* --------------- 4.5 Contact us ------------------- */
+.contact-us{
+    background: var(--gradient);
+}
 /* --------------- 4.6 Footer ------------------- */
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--zwart);
+    padding: 1em 0;
+    justify-content: center;
+}
+
+footer div {
+    color: var(--licht-grijs);
+    font-size: 0.8em;
+
+}
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
@@ -235,7 +278,7 @@ article div a {
     }
 
     /* ------------------------------- Case studies ----------------------------------- */
-    article {
+    .case-studies article {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -246,18 +289,35 @@ article div a {
         flex-direction: row-reverse;
     }
 
-    article div {
+    .case-studies article div {
         flex-basis: 35vw;
         padding: 0 2em;
     }
 
-    article span {
+    .case-studies article span {
         flex-basis: 50vw;
     }
 
     .case-studies {
         padding: 2em 2em;
     }
+    /* ------------------------------- Services ----------------------------------- */
 
+    .services div{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 4em 0;
+        justify-content: center;
+        flex-basis: 600px;
+    }
+    .services article {
+        margin: 1em 1em;
+        flex-basis: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 300px;
+
+    }
 
 }
