@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -8,24 +11,237 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Case studies
+        4.4 Services
+        4.5 Contact us
+        4.6 Footer
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+h2, h3, h4 {
+    font-family: Merriweather, sans-serif;
+    color: var(--zwart);
+}
+
+h1 {
+    font-family: Merriweather, sans-serif;
+    color: var(--licht-grijs);
+    font-size: 27px;
+}
+
+h4 {
+   color: var(--paars);
+    font-size: 16px;
+}
+
+p {
+    font-family: Roboto, sans-serif;
+    color: var(--zwart);
+    font-size: 16px;
+}
+
+a, button {
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    color: var(--licht-grijs);
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+:root {
+    --paars: #5722CD;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --licht-paars: #F2F0FF;
+    --licht-grijs: #F3F6F9;
+    --grijs: #7A7A7A;
+    --gradient: linear-gradient(101deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+}
 
 /* --------------- 3.2 Other --------------------------- */
+
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    align-items: center;
+    text-align: center;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header{
+    background: var(--gradient);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    width: 100vw;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 2em;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.header-tekst{
+    flex-basis: 220px;
+    justify-content: space-between;
+    margin: 5.5em 0 7.5em 0;
+}
+
+header p {
+    color: var(--licht-grijs);
+    font-size: 1.3em;
+    font-weight: 300;
+
+}
+
+header button {
+    background-color: var(--roze);
+    text-transform: uppercase;
+    padding: 1.2em 2em;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
+    border: none;
+}
+
+header img {
+    height: 75px;
+}
+
+
+
 
 /* --------------- 4.2 Introduction ------------------- */
 
+.introduction {
+    margin: 4em 0 4em 0;
+}
+
+.introduction h4 {
+    margin-bottom: 1em;
+}
+
+.introduction p {
+    margin-top: 2em;
+}
+
+.introduction a {
+    color: var(--paars);
+}
+
+/* --------------- 4.3 Case studies ------------------- */
+.case-studies{
+    background-color: var(--licht-grijs);
+    padding: 2em 1em;
+}
+
+article {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 2em 0.5em;
+}
+article > span > img {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+article h3 {
+    font-size: 22px;
+}
+
+article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+article div img {
+    width: 50px;
+}
+
+article div a {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--paars);
+    font-size: 0.8em;
+}
+
+/* --------------- 4.4 Services ------------------- */
+/* --------------- 4.5 Contact us ------------------- */
+/* --------------- 4.6 Footer ------------------- */
+
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (min-width: 992px) {
+    h1{
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 1.4em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    header ul{
+        padding-top: 1.5em;
+        font-weight: 300;
+        flex-basis: 315px;
+
+    }
+
+    .header-tekst{
+        flex-basis: 180px;
+        margin: 5em 0 6em 0;
+    }
+    .inner-container{
+        max-width: 600px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .variety {
+       flex-direction: row-reverse;
+    }
+
+    article{
+        align-items: center;
+    }
+
+
+}
