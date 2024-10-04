@@ -44,7 +44,7 @@ h1 {
 }
 
 h4 {
-   color: var(--paars);
+    color: var(--paars);
     font-size: 16px;
 }
 
@@ -71,12 +71,12 @@ a, button {
     --licht-paars: #F2F0FF;
     --licht-grijs: #F3F6F9;
     --grijs: #7A7A7A;
-    --gradient: linear-gradient(101deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+    --gradient: linear-gradient(101deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
 }
 
 /* --------------- 3.2 Other --------------------------- */
 
-.inner-container{
+.inner-container {
     display: flex;
     flex-direction: column;
     max-width: 340px;
@@ -87,7 +87,7 @@ a, button {
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
-header{
+header {
     background: var(--gradient);
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ nav {
     width: 100vw;
 }
 
-header ul{
+header ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -109,7 +109,7 @@ header ul{
     font-weight: 600;
 }
 
-.header-tekst{
+.header-tekst {
     flex-basis: 220px;
     justify-content: space-between;
     margin: 5.5em 0 7.5em 0;
@@ -136,8 +136,6 @@ header img {
 }
 
 
-
-
 /* --------------- 4.2 Introduction ------------------- */
 
 .introduction {
@@ -157,7 +155,7 @@ header img {
 }
 
 /* --------------- 4.3 Case studies ------------------- */
-.case-studies{
+.case-studies {
     background-color: var(--licht-grijs);
     padding: 2em 1em;
 }
@@ -167,9 +165,11 @@ article {
     flex-direction: column-reverse;
     margin: 2em 0.5em;
 }
+
 article > span > img {
     width: 100%;
     margin-bottom: 2em;
+    box-shadow: 0 10px 15px rgb(0,0,0,0.15);
 }
 
 article h3 {
@@ -202,45 +202,61 @@ article div a {
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
 @media screen and (min-width: 992px) {
-    h1{
+    /* ------------------------------- Typography ----------------------------------- */
+    h1 {
         font-size: 30px;
     }
+
     h4 {
         font-size: 1.4em;
     }
 
+    /* ------------------------------- Header ----------------------------------- */
     nav {
         display: flex;
         flex-direction: row;
         justify-content: end;
     }
 
-    header ul{
+    header ul {
         padding-top: 1.5em;
         font-weight: 300;
         flex-basis: 315px;
 
     }
 
-    .header-tekst{
+    .header-tekst {
         flex-basis: 180px;
         margin: 5em 0 6em 0;
     }
-    .inner-container{
+
+    .inner-container {
         max-width: 600px;
     }
 
+    /* ------------------------------- Case studies ----------------------------------- */
     article {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .variety {
-       flex-direction: row-reverse;
+        flex-direction: row-reverse;
     }
 
-    article{
-        align-items: center;
+    article div {
+        flex-basis: 35vw;
+        padding: 0 2em;
+    }
+
+    article span {
+        flex-basis: 50vw;
+    }
+
+    .case-studies {
+        padding: 2em 2em;
     }
 
 
