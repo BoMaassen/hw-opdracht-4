@@ -48,13 +48,17 @@ h4 {
     font-size: 16px;
 }
 
+h2 {
+    color: var(--licht-grijs);
+}
+
 p {
     font-family: Roboto, sans-serif;
     color: var(--zwart);
     font-size: 16px;
 }
 
-a, button {
+a, button, label {
     text-decoration: none;
     font-family: Roboto, sans-serif;
     color: var(--licht-grijs);
@@ -82,6 +86,14 @@ a, button {
     max-width: 340px;
     align-items: center;
     text-align: center;
+}
+
+button {
+    background-color: var(--roze);
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
+    border: none;
 }
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -123,12 +135,7 @@ header p {
 }
 
 header button {
-    background-color: var(--roze);
-    text-transform: uppercase;
     padding: 1.2em 2em;
-    border-radius: 30px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
-    border: none;
 }
 
 header img {
@@ -226,6 +233,59 @@ header img {
 .contact-us{
     background: var(--gradient);
 }
+.contact-us > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 2em 0;
+}
+
+.contact-us p, .contact-us label, .contact-us h2 {
+    color: var(--licht-grijs);
+}
+
+.contact-us h2{
+    padding: 0.8em 0;
+}
+
+.contact-us p {
+    font-size: 0.8em;
+}
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us form > div{
+    padding: 0.8em 0;
+    display: flex;
+    flex-direction: column;
+
+}
+.contact-us label {
+    font-weight: 600;
+}
+.contact-us button{
+    padding: 1em 4em;
+
+}
+.contact-us textarea{
+    font-family: Roboto, sans-serif;
+    color: var(--grijs);
+}
+
+.contact-us input {
+    height: 50px;
+    width: 350px;
+}
+
+.contact-us textarea{
+    width: 350px;
+    height: 150px;
+}
+
 /* --------------- 4.6 Footer ------------------- */
 footer{
     display: flex;
@@ -238,8 +298,8 @@ footer{
 footer div {
     color: var(--licht-grijs);
     font-size: 0.8em;
-
 }
+
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
@@ -279,13 +339,12 @@ footer div {
 
     /* ------------------------------- Case studies ----------------------------------- */
     .case-studies article {
-        display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
-    .variety {
+    article.variety {
         flex-direction: row-reverse;
     }
 
@@ -308,7 +367,7 @@ footer div {
         flex-wrap: wrap;
         margin: 4em 0;
         justify-content: center;
-        flex-basis: 600px;
+        max-width: 1000px;
     }
     .services article {
         margin: 1em 1em;
@@ -319,5 +378,25 @@ footer div {
         height: 300px;
 
     }
+    /* ------------------------------- Contact us ----------------------------------- */
+    .contact-us > div {
+        width: 600px;
+    }
+
+    .contact-us input {
+        height: 50px;
+        width: 600px;
+    }
+
+    .contact-us textarea{
+        width: 600px;
+        height: 150px;
+    }
+
+    .contact-us h2 {
+        font-size: 2.3em;
+    }
+
+
 
 }
