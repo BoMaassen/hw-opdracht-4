@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -8,24 +11,403 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Case studies
+        4.4 Services
+        4.5 Contact us
+        4.6 Footer
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4 {
+    font-family: Merriweather, sans-serif;
+}
+
+h1 {
+    color: var(--licht-grijs);
+    font-size: 27px;
+}
+
+h2 {
+    color: var(--licht-grijs);
+}
+
+h3 {
+    color: var(--zwart);
+}
+
+h4 {
+    color: var(--paars);
+    font-size: 16px;
+}
+
+p {
+    font-family: Roboto, sans-serif;
+    color: var(--zwart);
+    font-size: 16px;
+}
+
+a, button, label {
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    color: var(--licht-grijs);
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+:root {
+    --paars: #5722CD;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --licht-paars: #F2F0FF;
+    --licht-grijs: #F3F6F9;
+    --grijs: #7A7A7A;
+    --gradient: linear-gradient(101deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+}
 
 /* --------------- 3.2 Other --------------------------- */
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    background-color: var(--roze);
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
+    border: none;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: var(--gradient);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    width: 100vw;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 2em;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.header-tekst {
+    flex-basis: 220px;
+    justify-content: space-between;
+    margin: 5.5em 0 7.5em 0;
+}
+
+header p {
+    color: var(--licht-grijs);
+    font-size: 1.3em;
+    font-weight: 300;
+
+}
+
+header button {
+    padding: 1.2em 2em;
+}
+
+header img {
+    height: 75px;
+}
+
 
 /* --------------- 4.2 Introduction ------------------- */
 
+.introduction {
+    margin: 4em 0 4em 0;
+}
+
+.introduction h4 {
+    margin-bottom: 1em;
+}
+
+.introduction p {
+    margin-top: 2em;
+}
+
+.introduction a {
+    color: var(--paars);
+}
+
+/* --------------- 4.3 Case studies ------------------- */
+.case-studies {
+    background-color: var(--licht-grijs);
+    padding: 2em 1em;
+}
+
+.case-studies article {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 2em 0.5em;
+}
+
+.case-studies article > span > img {
+    width: 100%;
+    margin-bottom: 2em;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.15);
+}
+
+.case-studies article h3 {
+    font-size: 22px;
+}
+
+.case-studies article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.case-studies article div img {
+    width: 50px;
+}
+
+.case-studies article div a {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--paars);
+    font-size: 0.8em;
+}
+
+/* --------------- 4.4 Services ------------------- */
+.services div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+}
+
+.services article {
+    border: 1px solid var(--paars);
+    margin: 1em 2em;
+    padding: 2em;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.15);
+    flex-basis: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.services img {
+    width: 75px;
+}
+
+.services p {
+    font-size: 0.8em;
+    color: var(--grijs);
+}
+
+.services h4 {
+    font-size: 1.2em;
+}
+
+/* --------------- 4.5 Contact us ------------------- */
+.contact-us {
+    background: var(--gradient);
+}
+
+.contact-us > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 2em 0;
+}
+
+.contact-us p, .contact-us label, .contact-us h2 {
+    color: var(--licht-grijs);
+}
+
+.contact-us h2 {
+    padding: 0.8em 0;
+}
+
+.contact-us p {
+    font-size: 0.8em;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us form > div {
+    padding: 0.8em 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-us label {
+    font-weight: 600;
+}
+
+.contact-us button {
+    padding: 1em 4em;
+
+}
+
+.contact-us textarea {
+    font-family: Roboto, sans-serif;
+    color: var(--grijs);
+}
+
+.contact-us input {
+    height: 50px;
+    width: 350px;
+}
+
+.contact-us textarea {
+    width: 350px;
+    height: 150px;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--zwart);
+    padding: 1em 0;
+    justify-content: center;
+}
+
+footer div {
+    color: var(--licht-grijs);
+    font-size: 0.8em;
+}
+
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (min-width: 992px) {
+    /* ------------------------------- Typography ----------------------------------- */
+    h1 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 1.4em;
+    }
+
+    /* ------------------------------- Header ----------------------------------- */
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    header ul {
+        padding-top: 1.5em;
+        font-weight: 300;
+        flex-basis: 315px;
+
+    }
+
+    .header-tekst {
+        flex-basis: 180px;
+        margin: 5em 0 6em 0;
+    }
+
+    .inner-container {
+        max-width: 600px;
+    }
+
+    /* ------------------------------- Case studies ----------------------------------- */
+    .case-studies article {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    article.variety {
+        flex-direction: row-reverse;
+    }
+
+    .case-studies article div {
+        flex-basis: 35vw;
+        padding: 0 2em;
+    }
+
+    .case-studies article span {
+        flex-basis: 50vw;
+    }
+
+    .case-studies {
+        padding: 2em 2em;
+    }
+
+    /* ------------------------------- Services ----------------------------------- */
+    .services div {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 4em 0;
+        justify-content: center;
+        max-width: 1000px;
+    }
+
+    .services article {
+        margin: 1em 1em;
+        flex-basis: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 300px;
+
+    }
+
+    /* ------------------------------- Contact us ----------------------------------- */
+    .contact-us > div {
+        width: 600px;
+    }
+
+    .contact-us input {
+        height: 50px;
+        width: 600px;
+    }
+
+    .contact-us textarea {
+        width: 600px;
+        height: 150px;
+    }
+
+    .contact-us h2 {
+        font-size: 2.3em;
+    }
+
+
+}
