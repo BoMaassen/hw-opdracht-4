@@ -32,24 +32,26 @@ section {
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
-h2, h3, h4 {
+h1, h2, h3, h4 {
     font-family: Merriweather, sans-serif;
-    color: var(--zwart);
 }
 
 h1 {
-    font-family: Merriweather, sans-serif;
     color: var(--licht-grijs);
     font-size: 27px;
+}
+
+h2 {
+    color: var(--licht-grijs);
+}
+
+h3 {
+    color: var(--zwart);
 }
 
 h4 {
     color: var(--paars);
     font-size: 16px;
-}
-
-h2 {
-    color: var(--licht-grijs);
 }
 
 p {
@@ -176,7 +178,7 @@ header img {
 .case-studies article > span > img {
     width: 100%;
     margin-bottom: 2em;
-    box-shadow: 0 10px 15px rgb(0,0,0,0.15);
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.15);
 }
 
 .case-studies article h3 {
@@ -202,37 +204,42 @@ header img {
 }
 
 /* --------------- 4.4 Services ------------------- */
-.services div{
+.services div {
     display: flex;
     flex-direction: column;
     margin-top: 4em;
 }
+
 .services article {
     border: 1px solid var(--paars);
     margin: 1em 2em;
     padding: 2em;
-    box-shadow: 0 10px 15px rgb(0,0,0,0.15);
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.15);
     flex-basis: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
 }
+
 .services img {
     width: 75px;
 }
+
 .services p {
     font-size: 0.8em;
     color: var(--grijs);
 }
+
 .services h4 {
     font-size: 1.2em;
 }
 
 /* --------------- 4.5 Contact us ------------------- */
-.contact-us{
+.contact-us {
     background: var(--gradient);
 }
+
 .contact-us > div {
     display: flex;
     flex-direction: column;
@@ -245,33 +252,37 @@ header img {
     color: var(--licht-grijs);
 }
 
-.contact-us h2{
+.contact-us h2 {
     padding: 0.8em 0;
 }
 
 .contact-us p {
     font-size: 0.8em;
 }
+
 .contact-us form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contact-us form > div{
+.contact-us form > div {
     padding: 0.8em 0;
     display: flex;
     flex-direction: column;
 
 }
+
 .contact-us label {
     font-weight: 600;
 }
-.contact-us button{
+
+.contact-us button {
     padding: 1em 4em;
 
 }
-.contact-us textarea{
+
+.contact-us textarea {
     font-family: Roboto, sans-serif;
     color: var(--grijs);
 }
@@ -281,13 +292,13 @@ header img {
     width: 350px;
 }
 
-.contact-us textarea{
+.contact-us textarea {
     width: 350px;
     height: 150px;
 }
 
 /* --------------- 4.6 Footer ------------------- */
-footer{
+footer {
     display: flex;
     flex-direction: row;
     background-color: var(--zwart);
@@ -299,7 +310,6 @@ footer div {
     color: var(--licht-grijs);
     font-size: 0.8em;
 }
-
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
@@ -360,15 +370,16 @@ footer div {
     .case-studies {
         padding: 2em 2em;
     }
-    /* ------------------------------- Services ----------------------------------- */
 
-    .services div{
+    /* ------------------------------- Services ----------------------------------- */
+    .services div {
         flex-direction: row;
         flex-wrap: wrap;
         margin: 4em 0;
         justify-content: center;
         max-width: 1000px;
     }
+
     .services article {
         margin: 1em 1em;
         flex-basis: 300px;
@@ -378,6 +389,7 @@ footer div {
         height: 300px;
 
     }
+
     /* ------------------------------- Contact us ----------------------------------- */
     .contact-us > div {
         width: 600px;
@@ -388,7 +400,7 @@ footer div {
         width: 600px;
     }
 
-    .contact-us textarea{
+    .contact-us textarea {
         width: 600px;
         height: 150px;
     }
@@ -396,7 +408,6 @@ footer div {
     .contact-us h2 {
         font-size: 2.3em;
     }
-
 
 
 }
